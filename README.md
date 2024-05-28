@@ -7,7 +7,7 @@ This repository provides a PyTorch implementation of the Grover-Mixer Quantum Al
 The problem sets used in the paper are stored in the following files:
 
 - `n9_18_maxKcolorable.json`
-- `n16_30_maxcuts_regular3.jsonl`
+- `n16_30_maxcuts_regular3.json`
 - `18_30_max_k_vertex_cover.json`
 - `7_14_tsps.json`
 
@@ -15,8 +15,8 @@ The problem sets used in the paper are stored in the following files:
 
 The experimental results are stored in the following directories:
 
-- `approx_results`: Contains results for maximizing the expected value.
-- `popt_results`: Contains results for maximizing the probability of observing the optimal solution.
+- `approx_result`: Contains results for maximizing the expected value.
+- `popt_result`: Contains results for maximizing the probability of sampling the optimal solution.
 
 ## Requirements
 
