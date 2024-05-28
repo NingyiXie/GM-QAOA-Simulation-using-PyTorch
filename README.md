@@ -22,5 +22,3 @@ The experimental results are stored in the following directories:
 
 We used PyTorch version 1.13.0 for this implementation. Any newer version of PyTorch should also work.
 
-```bash
-pip install torch>=1.13.0
