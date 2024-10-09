@@ -140,10 +140,11 @@ def distribution_tsp(coordinates):
     n = len(coordinates)
     distances = get_distances(coordinates)
     distribution = {}
-    for perm in tqdm(permutations(range(1,n))):
+    for perm in permutations(range(1,n)):
         obj = np.round(obj_tsp(list(perm), distances),6)
-        distribution[obj] = distribution.get(obj,0) + 1
+        key = str(obj)
+        distribution[key] = distribution.get(key,0) + 1
     
-    distribution_array = np.array([[key, value] for key, value in distribution.items()],dtype=np.float32)
+    distribution_array = np.array([[float(key), value] for key, value in distribution.items()],dtype=np.float64)
     
     return distribution_array

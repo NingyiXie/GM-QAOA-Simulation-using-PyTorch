@@ -11,12 +11,22 @@ The problem sets used in the paper are stored in the following files:
 - `18_30_max_k_vertex_cover.json`
 - `7_14_tsps.json`
 
+## Simulation Methods
+
+Our simulation approach requires obtaining the distribution of objective values for a given problem in advance. The methods to retrieve these distributions for problems adopted in the paper are defined in `obj.py`.
+
+When optimizing GM-QAOA, we utilize PyTorch's automatic differentiation to compute gradients. The `GMQAOA` class defined in `gmqaoa.py` can simulate both GM-QAOA and GM-Th-QAOA.
+
+We employ depth progressive methods and quantum annealing initialization (TQA) to obtain multiple sets of initial parameters. Each set is optimized separately, and the best result is selected.
+
 ## Experimental Results
 
 The experimental results are stored in the following directories:
 
 - `approx_result`: Contains results for maximizing the expected value.
 - `popt_result`: Contains results for maximizing the probability of sampling the optimal solution.
+
+By running the `.ipynb` files, you can plot the Figures from the paper.
 
 ## Requirements
 
